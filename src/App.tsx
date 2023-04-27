@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PodcastList from "./components/PodcastList/PodcastList";
+import PodcastDetails from "./components/PodcastDetails/PodcastDetails";
+import EpisodeDetails from "./components/EpisodeDetails/EpisodeDetails";
+import { NavBar } from "./components/Layout/Navbar";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <div className={styles.app__container}>
+        <Routes>
+          <Route path="/" element={<PodcastList />} />
+          <Route path="/podcast/:podcastId" element={<PodcastDetails />} />
+          <Route
+            path="/podcast/:podcastId/episode/:episodeId"
+            element={<EpisodeDetails />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

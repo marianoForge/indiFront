@@ -1,0 +1,78 @@
+.podcastListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.podcastList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  font-family: "Popins", sans-serif;
+}
+
+.podcastListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  max-width: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  max-height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #ccc;
+  cursor: pointer;
+}
+
+.podcastListItemImage {
+  margin-bottom: 1rem;
+}
+
+.podcastListSearchBar {
+  width: 20rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #ccc;
+  font-size: 1rem;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #766df4);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 16px), #000 0);
+  animation: s3 1s infinite linear;
+}
+@keyframes s3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinnerMessage {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #766df4;
+  font-family: "Poppins", sans-serif;
+}
